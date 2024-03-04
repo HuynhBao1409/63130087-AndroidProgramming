@@ -26,7 +26,34 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TimDK();
+        //Gan bo lang nghe an danh cho  su kien xu ly nut Nhan, Chia
+        nutNhan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String so1= editTextSo1.getText().toString();
+                String so2= editTextSo2.getText().toString();
+                float soA= Float.parseFloat(so1);
+                float soB=Float.parseFloat(so2);
+                float tich=soA*soB;
+                String chuoiKQ= String.valueOf(tich);
+                editTextKQ.setText(chuoiKQ);
+            }
+        });
+        //nut Chia
+        nutChia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String so1= editTextSo1.getText().toString();
+                String so2= editTextSo2.getText().toString();
+                float soA= Float.parseFloat(so1);
+                float soB=Float.parseFloat(so2);
+                float thuong=soA/soB;
+                String chuoiKQ= String.valueOf(thuong);
+                editTextKQ.setText(chuoiKQ);
+            }
+        });
     }
+
 
     public void XuLyCong(View v){
     //Tim du lieu
@@ -51,22 +78,5 @@ public class MainActivity extends AppCompatActivity {
     String chuoiKQ= String.valueOf(hieu);
     editTextKQ.setText(chuoiKQ);
     }
-    public void XuLyNhan(View v){
-        String so1= editTextSo1.getText().toString();
-        String so2= editTextSo2.getText().toString();
-        float soA= Float.parseFloat(so1);
-        float soB=Float.parseFloat(so2);
-        float tich=soA*soB;
-        String chuoiKQ= String.valueOf(tich);
-        editTextKQ.setText(chuoiKQ);
-    }
-    public void XuLyChia(View v){
-        String so1= editTextSo1.getText().toString();
-        String so2= editTextSo2.getText().toString();
-        float soA= Float.parseFloat(so1);
-        float soB=Float.parseFloat(so2);
-        float thuong=soA/soB;
-        String chuoiKQ= String.valueOf(thuong);
-        editTextKQ.setText(chuoiKQ);
-    }
+
 }
