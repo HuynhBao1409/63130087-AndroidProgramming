@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -13,7 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    ArrayList<String> dsTen;//khai bao
+    //khai bao
+    ArrayList<String> dsTen;
+    ArrayAdapter<String> adapterThanh;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         dsTen.add("Thành phố HCM");
         dsTen.add("Nha Trang");
         dsTen.add("Đồng Nai");
-        ArrayAdapter<String> adapterThanh;
         adapterThanh = new ArrayAdapter<>(this, android.R.layout
                     .simple_list_item_1 , dsTen);
         //tim va gan du lieu
@@ -42,5 +44,12 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, strTenTinh, Toast.LENGTH_LONG).show();
         }
     };
-
+    public void ThemPhanTu (View v){
+        //Lay du lieu tu dieu khien
+        EditText edtTenMoi = (EditText)findViewById(R.id.edtNhap);
+        String tenNhap = edtTenMoi.getText().toString();
+        //Them vao ds ten
+        dsTen.add(tenNhap);
+        adapterThanh.notifyDataSetChanged();
+    }
 }
