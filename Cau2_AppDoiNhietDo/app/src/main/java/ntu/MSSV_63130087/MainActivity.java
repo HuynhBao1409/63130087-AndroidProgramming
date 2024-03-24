@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         btnF = findViewById(R.id.btn_F);
         btnClear = findViewById(R.id.btn_Clear);
         //xu ly Click
-        //Tu F sang C
+        //Chuyen Doi Tu F sang C
         btnF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 edtF.setText(F+"");
             }
         });
-        //Tu C sang F
+        //Chuyen Doi Tu C sang F
         btnC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
