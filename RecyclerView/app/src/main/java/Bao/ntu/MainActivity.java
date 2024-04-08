@@ -30,10 +30,9 @@ public class MainActivity extends AppCompatActivity {
     }
     ArrayList<LandScape> getDataForRecyclerView() {
         ArrayList<LandScape> dsDuLieu = new ArrayList<LandScape>();
-        LandScape lS1 = new LandScape("1183450","Ảnh Fantatic");
+        LandScape lS1 = new LandScape("toothless","Ảnh Fantatic");
         dsDuLieu.add(lS1);
-        dsDuLieu.add(new LandScape("Anh 4k", "bla bla"));
-        dsDuLieu.add(new LandScape("12345", "Fanta"));
+        dsDuLieu.add(new LandScape("Mine", "bla bla"));
     return dsDuLieu;
     }
 }
