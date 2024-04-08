@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         btnF = findViewById(R.id.btn_F);
         btnClear = findViewById(R.id.btn_Clear);
         //xu ly Click
-        //Chuyen Doi Tu F sang C
+        //Chuyen Doi Tu C sang F
         btnF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 edtF.setText(F+"");//xóa giá trị của F để hiện thị kết quả mới
             }
         });
-        //Chuyen Doi Tu C sang F
+        //Chuyen Doi Tu F sang C
         btnC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
