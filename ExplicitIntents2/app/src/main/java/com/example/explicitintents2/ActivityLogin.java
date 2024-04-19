@@ -39,6 +39,7 @@ public class ActivityLogin extends AppCompatActivity {
 
                 // Chuyển sang ActivityHome
                 startActivity(new Intent(ActivityLogin.this, ActivityHome.class));
+
             }
         });
     }
