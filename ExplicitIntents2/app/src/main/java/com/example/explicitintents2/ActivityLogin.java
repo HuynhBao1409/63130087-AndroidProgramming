@@ -39,7 +39,10 @@ public class ActivityLogin extends AppCompatActivity {
 
                 // Chuyển sang ActivityHome
                 startActivity(new Intent(ActivityLogin.this, ActivityHome.class));
-
+                String username = edtDangnhap.getText().toString();
+                Intent intent = new Intent(ActivityLogin.this, ActivityHome.class);
+                intent.putExtra("username", username);
+                startActivity(intent);
             }
         });
     }
