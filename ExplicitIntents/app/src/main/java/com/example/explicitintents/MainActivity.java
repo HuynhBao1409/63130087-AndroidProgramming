@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void ChuyenMan(View v){
-        Intent iMan = new Intent(this,SubActivityOne.class);
+        Intent iMan = new Intent(MainActivity.this,SubActivityOne.class);
         startActivity(iMan);
     }
 }
