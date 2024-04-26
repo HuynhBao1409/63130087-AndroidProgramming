@@ -58,13 +58,13 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setBackground(null);
         bottomNavigationView.setOnItemSelectedListener(item -> {
             if (item.getItemId() == R.id.home) {
-                replaceFragment(new HomeFragment());
+                HomeFragment selectedFragment = new HomeFragment();
             } else if (item.getItemId() == R.id.shorts) {
-                replaceFragment(new ShortsFragment());
+                ShortsFragment selectedFragment = new ShortsFragment();
             } else if (item.getItemId() == R.id.subscriptions) {
-                replaceFragment(new SubscriptionsFragment());
+                SubcriptionsFragment selectedFragment = new SubcriptionsFragment();
             } else if (item.getItemId() == R.id.library) {
-                replaceFragment(new LibraryFragment());
+                LibraryFragment selectedFragment = new LibraryFragment();
             }
             return true;
         });
