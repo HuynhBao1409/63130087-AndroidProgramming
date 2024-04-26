@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     FloatingActionButton fab;
     DrawerLayout drawerLayout;
     BottomNavigationView bottomNavigationView;
+    @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,22 +57,15 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView.setBackground(null);
         bottomNavigationView.setOnItemSelectedListener(item -> {
-
-            switch (item.getItemId()) {
-                case R.id.home:
-                    replaceFragment(new HomeFragment());
-                    break;
-                case R.id.shorts:
-                    replaceFragment(new ShortsFragment());
-                    break;
-                case R.id.subscriptions:
-                    replaceFragment(new SubcriptionsFragment());
-                    break;
-                case R.id.library:
-                    replaceFragment(new LibraryFragment());
-                    break;
+            if (item.getItemId() == R.id.home) {
+                replaceFragment(new HomeFragment());
+            } else if (item.getItemId() == R.id.shorts) {
+                replaceFragment(new ShortsFragment());
+            } else if (item.getItemId() == R.id.subscriptions) {
+                replaceFragment(new SubscriptionsFragment());
+            } else if (item.getItemId() == R.id.library) {
+                replaceFragment(new LibraryFragment());
             }
-
             return true;
         });
 
