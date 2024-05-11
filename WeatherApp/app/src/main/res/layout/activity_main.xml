@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/back_1"
-    tools:context=".MainActivity">
+    tools:context=".Activitis.MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:text="Hôm Nay"
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_marginTop="16dp"/>
@@ -35,7 +35,7 @@
                 android:text="T2 10/05"
                 android:textSize="14dp"
                 android:textAlignment="center"
-                android:textColor="@color/white"/>
+                android:textColor="@color/black"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -56,7 +56,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Nhiều Mây"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textAlignment="center"
                     android:textSize="20sp"/>
 
@@ -65,7 +65,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="30°"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textAlignment="center"
                     android:textSize="43sp"
                     android:layout_marginTop="4dp"/>
@@ -77,7 +77,7 @@
                     android:text="C:36  T:24"
                     android:textSize="16sp"
                     android:textAlignment="center"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/black"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -103,7 +103,7 @@
                             android:layout_height="wrap_content"
                             android:text="25%"
                             android:textAlignment="center"
-                            android:textColor="@color/white" />
+                            android:textColor="@color/black" />
 
                         <TextView
                             android:id="@+id/textView7"
@@ -111,7 +111,7 @@
                             android:layout_height="wrap_content"
                             android:text="Mưa"
                             android:textAlignment="center"
-                            android:textColor="@color/white" />
+                            android:textColor="@color/black" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -133,7 +133,7 @@
                             android:layout_height="wrap_content"
                             android:text="10km/h"
                             android:textAlignment="center"
-                            android:textColor="@color/white" />
+                            android:textColor="@color/black" />
 
                         <TextView
                             android:id="@+id/textView7"
@@ -141,7 +141,7 @@
                             android:layout_height="wrap_content"
                             android:text="Sức Gió"
                             android:textAlignment="center"
-                            android:textColor="@color/white" />
+                            android:textColor="@color/black" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -163,7 +163,7 @@
                             android:layout_height="wrap_content"
                             android:text="15%"
                             android:textAlignment="center"
-                            android:textColor="@color/white" />
+                            android:textColor="@color/black" />
 
                         <TextView
                             android:id="@+id/textView7"
@@ -171,7 +171,7 @@
                             android:layout_height="wrap_content"
                             android:text="Độ ẩm"
                             android:textAlignment="center"
-                            android:textColor="@color/white" />
+                            android:textColor="@color/black" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -200,17 +200,17 @@
                     android:layout_height="wrap_content"
 
                     android:text="7 ngày tới"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textStyle="bold"/>
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/view1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/view1"
                 android:clipToPadding="false"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"/>
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"/>
         </LinearLayout>
     </ScrollView>
 
