@@ -32,24 +32,29 @@ public class HourlyAdapter extends RecyclerView.Adapter<HourlyAdapter.ViewHolder
     @NonNull
     @Override
     public HourlyAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        // khởi tạo ViewHolder và gán layout
         View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_hourly, parent, false);
         context = parent.getContext();
+        // trả về ViewHolder đã tạo và hiển thị các mục trong RecyclerView
         return new ViewHolder(inflate);
     }
 
     @Override
     public void onBindViewHolder(@NonNull HourlyAdapter.ViewHolder holder, int position) {
+        // lấy giá trị từ Hourly
         holder.hourTxt.setText(items.get(position).getHour());
         holder.tempTxt.setText(items.get(position).getTemp() + "°");
 
-        int drawableResourceId = context.getResources().getIdentifier(items.get(position).getPicPath(), "drawable", context.getPackageName());
-
-
+        // định danh ảnh trong drawable, lưu trong list
+        int drawableResourceId = context.getResources()
+                .getIdentifier(items.get(position).getPicPath(), "drawable", context.getPackageName());
+        // thư viện glide tải ảnh
         Glide.with(context).load(drawableResourceId).into(holder.pic);
     }
 
     @Override
     public int getItemCount() {
+        // trả về đúng số lương items trong List
         return items.size();
     }
 
@@ -59,6 +64,7 @@ public class HourlyAdapter extends RecyclerView.Adapter<HourlyAdapter.ViewHolder
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            // ánh xạ với các thành phần viewholder
             hourTxt = itemView.findViewById(R.id.hourTxt);
             tempTxt = itemView.findViewById(R.id.tempTxt);
             pic = itemView.findViewById(R.id.pic);

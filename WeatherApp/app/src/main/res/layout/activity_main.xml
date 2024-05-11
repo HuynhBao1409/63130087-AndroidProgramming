@@ -20,7 +20,7 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hôm Nay"
+                android:text="Nha Trang"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="20sp"
@@ -32,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="T2 10/05"
+                android:text="T2 10|05"
                 android:textSize="14dp"
                 android:textAlignment="center"
                 android:textColor="@color/black"/>

@@ -5,12 +5,13 @@ public class Hourly {
     private int temp;
     private String picPath;
 
+    // Contructor nhận tham số và gán tương ứng vào Hour,temp,pic
     public Hourly(String hour, int temp, String picPath) {
         Hour = hour;
         this.temp = temp;
         this.picPath = picPath;
     }
-
+    // Getter, setter trả và gán giá trị
     public String getHour() {
         return Hour;
     }
