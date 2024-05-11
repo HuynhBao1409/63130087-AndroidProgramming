@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -21,8 +24,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         initRecyclerView();
+        setVariable();
     }
 
+    //Chuyển màn sang tomorrow
+    private void setVariable() {
+        TextView next7dayBtn = findViewById(R.id.nextBtn);
+        // sự kiện bộ lắng nghe OnClick
+        // Chuyển màn MainActivity->TomorrowActivity
+        next7dayBtn.setOnClickListener(v ->
+            startActivity(new Intent(MainActivity.this,TomorrowActivity.class)));
+    }
+
+    //RecyclerView khu giờ
     private void initRecyclerView() {
         ArrayList<Hourly> items=new ArrayList<>();
         // thêm vào danh sách Hourly

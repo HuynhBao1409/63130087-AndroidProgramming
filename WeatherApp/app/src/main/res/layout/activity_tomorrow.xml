@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/back_1">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/back_1"
+    android:name=".Activitis.TomorrowActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,7 +17,7 @@
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/back_btn"
+                android:id="@+id/back_Btn"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
                 android:layout_marginStart="16dp"
@@ -190,11 +192,12 @@
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/view2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:layout_weight="1"
-                android:nestedScrollingEnabled="true"
-                android:layout_marginTop="20dp"/>
+                android:nestedScrollingEnabled="true" />
 
         </LinearLayout>
     </ScrollView>

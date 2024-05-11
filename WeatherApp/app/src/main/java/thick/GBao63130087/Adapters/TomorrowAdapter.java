@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,42 +12,43 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
-import java.time.Instant;
 import java.util.ArrayList;
-import java.util.List;
 
 import thick.GBao63130087.Domains.Hourly;
+import thick.GBao63130087.Domains.TomorrowDomain;
 import thick.GBao63130087.R;
 
 
-public class HourlyAdapter extends RecyclerView.Adapter<HourlyAdapter.ViewHolder> {
-    ArrayList<Hourly> items;
+public class TomorrowAdapter extends RecyclerView.Adapter<TomorrowAdapter.ViewHolder> {
+    ArrayList<TomorrowDomain> items;
     Context context;
 
-    public HourlyAdapter(ArrayList<Hourly> items) {
+    public TomorrowAdapter(ArrayList<TomorrowDomain> items) {
         this.items = items;
     }
 
     @NonNull
     @Override
-    public HourlyAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // khởi tạo ViewHolder và gán layout
-        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_hourly, parent, false);
+    public TomorrowAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        // khởi tạo ViewHolder và gán vào layout
+        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_tomorrow, parent, false);
         context = parent.getContext();
         // trả về ViewHolder và hiển thị các mục trong RecyclerView
         return new ViewHolder(inflate);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull HourlyAdapter.ViewHolder holder, int position) {
-        // lấy giá trị từ Hourly
-        holder.hourTxt.setText(items.get(position).getHour());
-        holder.tempTxt.setText(items.get(position).getTemp() + "°");
+    public void onBindViewHolder(@NonNull TomorrowAdapter.ViewHolder holder, int position) {
+        // lấy giá trị từ TomorrowDomain
+        holder.dayTxt.setText(items.get(position).getDay());
+        holder.statusTxt.setText(items.get(position).getStatus());
+        holder.highTxt.setText(items.get(position).getHighTemp());
+        holder.lowTxt.setText(items.get(position).getLowTemp());
 
         // định danh ảnh trong drawable, lưu trong list
         int drawableResourceId = context.getResources()
                 .getIdentifier(items.get(position).getPicPath(), "drawable", context.getPackageName());
-        // thư viện glide tải ảnh
+        // thư viện glide tải ảnh lên
         Glide.with(context).load(drawableResourceId).into(holder.pic);
     }
 
@@ -59,14 +59,16 @@ public class HourlyAdapter extends RecyclerView.Adapter<HourlyAdapter.ViewHolder
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView hourTxt, tempTxt;
+        TextView dayTxt,statusTxt,lowTxt,highTxt;
         ImageView pic;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            // ánh xạ với các thành phần viewholder_hourly
-            hourTxt = itemView.findViewById(R.id.hourTxt);
-            tempTxt = itemView.findViewById(R.id.tempTxt);
+            // ánh xạ với các thành phần viewholder_tomorrow
+            dayTxt=itemView.findViewById(R.id.dayTxt);
+            statusTxt=itemView.findViewById(R.id.statusTxt);
+            lowTxt=itemView.findViewById(R.id.lowTxt);
+            highTxt=itemView.findViewById(R.id.highTxt);
             pic = itemView.findViewById(R.id.pic);
         }
     }
