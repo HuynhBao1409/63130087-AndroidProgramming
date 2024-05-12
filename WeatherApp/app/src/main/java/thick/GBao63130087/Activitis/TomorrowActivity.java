@@ -1,23 +1,23 @@
 package thick.GBao63130087.Activitis;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+
 import java.util.ArrayList;
 
-import thick.GBao63130087.Adapters.HourlyAdapter;
 import thick.GBao63130087.Adapters.TomorrowAdapter;
-import thick.GBao63130087.Domains.Hourly;
 import thick.GBao63130087.Domains.TomorrowDomain;
 import thick.GBao63130087.R;
 
 public class TomorrowActivity extends AppCompatActivity {
+
     private RecyclerView.Adapter adapterTomorrow;
     private RecyclerView recyclerView;
 
@@ -32,9 +32,13 @@ public class TomorrowActivity extends AppCompatActivity {
 
     // Quay lại MainActivity
     private void setVariable() {
-        ConstraintLayout backbtn = findViewById(R.id.back_Btn);
-        backbtn.setOnClickListener(v -> startActivity(new Intent(TomorrowActivity.this, MainActivity.class)));
+        // ánh xạ giá trị tới img_Btn
+        ImageView backButton = findViewById(R.id.img_Btn);
+        // sự kiện bộ lắng nghe OnClick
+        // Chuyển màn MainActivity->TomorrowActivity
+        backButton.setOnClickListener(v -> startActivity(new Intent(TomorrowActivity.this, MainActivity.class)));
     }
+
 
     private void initRecyclerView() {
         // tương tự MainActivity
@@ -51,8 +55,7 @@ public class TomorrowActivity extends AppCompatActivity {
         recyclerView=findViewById(R.id.view2);
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
-        adapterTomorrow = new TomorrowAdapter(items); // Tạo adapter và chuyển danh sách items vào
+        adapterTomorrow = new TomorrowAdapter(items); // Tạo adapter và chuyển danh sách items
         recyclerView.setAdapter(adapterTomorrow); // Gán adapter cho RecyclerView
-
     }
 }

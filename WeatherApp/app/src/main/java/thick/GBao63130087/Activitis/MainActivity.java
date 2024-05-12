@@ -18,16 +18,17 @@ import thick.GBao63130087.R;
 public class MainActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapterHourly;
     private RecyclerView recyclerView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initRecyclerView();
+       initRecyclerView();
         setVariable();
     }
 
-    //Chuyển màn sang tomorrow
+//    //Chuyển màn sang tomorrow
     private void setVariable() {
         TextView next7dayBtn = findViewById(R.id.nextBtn);
         // sự kiện bộ lắng nghe OnClick
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this,TomorrowActivity.class)));
     }
 
-    //RecyclerView khu giờ
+//    //RecyclerView khu giờ
     private void initRecyclerView() {
         ArrayList<Hourly> items=new ArrayList<>();
         // thêm vào danh sách Hourly
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView=findViewById(R.id.view1);
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
-        adapterHourly = new HourlyAdapter(items); // Tạo adapter và chuyển danh sách items vào
+        adapterHourly = new HourlyAdapter(items); // Tạo adapter và chuyển danh sách items
         recyclerView.setAdapter(adapterHourly); // Gán adapter cho RecyclerView
 
     }
