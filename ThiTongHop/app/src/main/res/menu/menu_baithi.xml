@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@+id/nagvigation_welcome"
-        android:icon="@android:drawable/star_big_on"
-        android:title="Welcome"/>
+
     <item
         android:id="@+id/nagvigation_cau1"
         android:icon="@android:drawable/btn_star_big_on"
         android:title="Câu1"/>
+    <item
+        android:id="@+id/nagvigation_welcome"
+        android:icon="@android:drawable/star_big_on"
+        android:title="Welcome"/>
     <item
         android:id="@+id/nagvigation_cau2"
         android:icon="@android:drawable/btn_star_big_on"
