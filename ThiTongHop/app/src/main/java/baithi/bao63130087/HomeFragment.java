@@ -61,7 +61,7 @@ public class HomeFragment extends Fragment {
                 double meter = Double.parseDouble(meterText);
                 double km = meter / 1000;
                 edt_KM.setText(String.valueOf(km));
-                
+
         // km->m
         } else if (!kmText.isEmpty()) {
                 double km = Double.parseDouble(kmText);
