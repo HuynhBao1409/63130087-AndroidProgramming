@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="T2 10|05"
-                android:textSize="14dp"
+                android:textSize="16dp"
                 android:textAlignment="center"
                 android:textColor="@color/black"/>
 
