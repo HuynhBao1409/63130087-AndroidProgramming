@@ -58,7 +58,7 @@ public class Cau4Fragment extends Fragment {
 //                                                "Page integer, " +
 //                                                "Price Float, " +
 //                                                "Description text);";
-//            // thực hiện lệnh sql
+//        // thực hiện lệnh sql
 //        db.execSQL(sqlXoaBangNeuDaCo);
 //        db.execSQL(sqlTaoBang);
 //        // Thêm một số dòng dữ liệu vào bảng
@@ -76,7 +76,7 @@ public class Cau4Fragment extends Fragment {
 //        // Ta đóng lại để check
 //        db.close();
         // B1. Mở CSDL
-        SQLiteDatabase db = getActivity().openOrCreateDatabase("MyBook.db", MODE_PRIVATE, null);
+        SQLiteDatabase db = getActivity().openOrCreateDatabase("QLSach.db", MODE_PRIVATE, null);
 
         // B2. Thực thi câu lệnh select
         String sqlSelect = "SELECT * FROM Books;";
@@ -117,6 +117,7 @@ public class Cau4Fragment extends Fragment {
                 getContext(),
                 android.R.layout.simple_list_item_1,
                 dsTenSach);
+        //Tìm điều khiển cho list
         ListView listView = viewCau4.findViewById(R.id.Lv_danhsach);
         listView.setAdapter(adapterTenSach);
         // Lắng nghe và xử lý

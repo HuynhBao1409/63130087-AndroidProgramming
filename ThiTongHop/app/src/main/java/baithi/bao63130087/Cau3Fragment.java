@@ -37,7 +37,7 @@ public class Cau3Fragment extends Fragment {
         //3. Chuẩn bị dữ liệu cho list
         list = new ArrayList<LandScape>();
         list.add(new LandScape("test", "ic_banner"));
-        list.add(new LandScape("test", "ic_banner"));
+        list.add(new LandScape("test", "toothless"));
         list.add(new LandScape("test", "ic_banner"));
         list.add(new LandScape("test", "ic_banner"));
     }
