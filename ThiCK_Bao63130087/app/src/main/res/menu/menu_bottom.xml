@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nagvigation_welcome"
+        android:icon="@android:drawable/star_big_on"
+        android:title="WelcomeFragment"/>
+    <item
+        android:id="@+id/nagvigation_Unit"
+        android:icon="@android:drawable/btn_star_big_on"
+        android:title="UnitConverterFragment"/>
+
+    <item
+        android:id="@+id/nagvigation_Welknown"
+        android:icon="@android:drawable/btn_star_big_on"
+        android:title="WelknownCoffeeFragment"/>
+    <item
+        android:id="@+id/nagvigation_Subject"
+        android:icon="@android:drawable/btn_star_big_on"
+        android:title="SubjectsFragment"/>
+    <item
+        android:id="@+id/nagvigation_MyCV"
+        android:icon="@android:drawable/btn_star_big_on"
+        android:title="MyCVFragment"/>
+</menu>
